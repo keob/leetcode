@@ -15,19 +15,22 @@ class Solution:
                 i += 1
                 j -= 1
 
-        for i in range(n-2, -1, -1):
-            if nums[i] < nums[i+1]:
+        for i in range(n - 2, -1, -1):
+            if nums[i] < nums[i + 1]:
                 firstIndex = i
                 break
 
         if firstIndex == -1:
-            reverse(nums, 0, n-1)
-            return 
+            reverse(nums, 0, n - 1)
+            return
+
         secondIndex = -1
-        for i in range(n-1, firstIndex, -1):
+
+        for i in range(n - 1, firstIndex, -1):
             if nums[i] > nums[firstIndex]:
                 secondIndex = i
                 break
-        nums[firstIndex], nums[secondIndex] = nums[secondIndex], nums[firstIndex]
+        nums[firstIndex], nums[secondIndex] = nums[secondIndex], nums[
+            firstIndex]
 
-        reverse(nums, firstIndex+1, n-1)
+        reverse(nums, firstIndex + 1, n - 1)

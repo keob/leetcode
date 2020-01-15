@@ -19,7 +19,7 @@ class Solution:
             end = start
 
             while start + words_total_len <= s_len:
-                word = s[end:end+word_len]
+                word = s[end:end + word_len]
                 end += word_len
                 if word in count:
                     queue = loopring[word]
@@ -28,7 +28,7 @@ class Solution:
                         queue.popleft()
                     if len(queue) > count[word]:
                         start = queue.popleft()
-                    if start+words_total_len == end:
+                    if start + words_total_len == end:
                         res.append(start)
                 else:
                     start = end

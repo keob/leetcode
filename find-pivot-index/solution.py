@@ -9,4 +9,5 @@ class Solution:
             if leftsum == (S - leftsum - x):
                 return i
             leftsum += x
+
         return -1

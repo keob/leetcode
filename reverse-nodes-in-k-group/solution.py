@@ -10,7 +10,7 @@ class Solution:
         cur = head
         count = 0
 
-        while cur and count!= k:
+        while cur and count != k:
             cur = cur.next
             count += 1
 
@@ -24,5 +24,5 @@ class Solution:
                 head = tmp
                 count -= 1
             head = cur
-            
+
         return head

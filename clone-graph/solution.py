@@ -11,10 +11,13 @@ class Solution:
         def dfs(node):
             if not node:
                 return
+
             if node in tmp:
                 return tmp[node]
+
             clone = Node(node.val, [])
             tmp[node] = clone
+
             for n in node.neighbors:
                 clone.neighbors.append(dfs(n))
 

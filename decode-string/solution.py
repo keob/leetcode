@@ -2,6 +2,7 @@ class Solution:
     def decodeString(self, s: str) -> str:
         num = ''
         numStack, strStack = [], []
+
         for st in s:
             if st.isdigit():
                 num += st
@@ -19,4 +20,5 @@ class Solution:
                 strStack.append(numStack.pop() * tempStr)
             else:
                 strStack.append(st)
+
         return ''.join(strStack)

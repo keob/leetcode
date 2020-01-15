@@ -13,4 +13,5 @@ class Solution:
                 if not seen[nei]:
                     seen[nei] = True
                     stack.append(nei)
+
         return all(seen)

@@ -16,4 +16,5 @@ class Solution:
             else:
                 visited.add(node)
                 node = node.next
+
         return None

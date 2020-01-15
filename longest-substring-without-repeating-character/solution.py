@@ -3,6 +3,7 @@ class Solution:
         longStr = set([])
         curStr = set([])
         max = 0
+
         for i in range(len(s)):
             longStr = set([s[i]])
             curStr = set([s[i]])
@@ -14,4 +15,5 @@ class Solution:
                     break
             if len(longStr) > max:
                 max = len(longStr)
+
         return max

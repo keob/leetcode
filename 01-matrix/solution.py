@@ -26,4 +26,5 @@ class Solution:
                         r = matrix[i][j + 1]
 
                     matrix[i][j] = min(matrix[i][j], min(r, b) + 1)
+
         return matrix

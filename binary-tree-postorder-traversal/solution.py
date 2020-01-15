@@ -13,7 +13,9 @@ class Solution:
         if root is None:
             return []
 
-        stack, output = [root, ], []
+        stack, output = [
+            root,
+        ], []
         while stack:
             root = stack.pop()
             output.append(root.val)

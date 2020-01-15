@@ -14,6 +14,7 @@ class Solution:
         dead = set(deadends)
         queue = collections.deque([('0000', 0)])
         seen = {'0000'}
+
         while queue:
             node, depth = queue.popleft()
             if node == target:
@@ -24,4 +25,5 @@ class Solution:
                 if nei not in seen:
                     seen.add(nei)
                     queue.append((nei, depth + 1))
+
         return -1

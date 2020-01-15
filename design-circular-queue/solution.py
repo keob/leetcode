@@ -45,6 +45,7 @@ class MyCircularQueue:
 
     def isFull(self) -> bool:
         tempRead = (self.rear + 1) % self.length
+
         if tempRead == self.front:
             return True
         return False

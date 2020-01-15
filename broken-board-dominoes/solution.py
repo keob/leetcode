@@ -4,9 +4,11 @@ from typing import List
 class Solution:
     def domino(self, n: int, m: int, broken: List[List[int]]) -> int:
         broken_map = dict()
+
         for b in broken:
             if b[0] not in broken_map:
                 broken_map[b[0]] = dict()
+
             broken_map[b[0]][b[1]] = True
 
         def is_broken(a, b):

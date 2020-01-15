@@ -9,6 +9,7 @@ class Solution:
                 y1 = points[i].y
                 x2 = points[j].x
                 y2 = points[j].y
+
                 if x1 == x2 and y1 == y2:
                     duplicates += 1
                 elif y1 == y2:
@@ -19,6 +20,7 @@ class Solution:
                     slope = (x1 - x2) / (y1 - y2)
                     lines[slope] = lines.get(slope, 1) + 1
                     count = max(lines[slope], count)
+
                 return count, duplicates
 
             lines, horisontal_lines = {}, 1
@@ -30,6 +32,7 @@ class Solution:
             return count + duplicates
 
         n = len(points)
+
         if n < 3:
             return n
 

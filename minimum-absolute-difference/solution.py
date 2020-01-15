@@ -8,8 +8,11 @@ class Solution:
         m = arr[1] - arr[0]
         for i in range(1, n):
             m = min(m, arr[i] - arr[i - 1])
+
         ans = []
+
         for i in range(1, n):
             if arr[i] - arr[i - 1] == m:
                 ans.append([arr[i - 1], arr[i]])
+
         return ans

@@ -11,6 +11,7 @@ class TreeNode:
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         levels = []
+
         if not root:
             return levels
 

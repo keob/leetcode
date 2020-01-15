@@ -8,14 +8,17 @@ class Solution:
         m = len(grid)
         if m == 0:
             return 0
+
         n = len(grid[0])
         marked = [[False for _ in range(n)] for _ in range(m)]
         count = 0
+
         for i in range(m):
             for j in range(n):
                 if not marked[i][j] and grid[i][j] == '1':
                     count += 1
                     self.__dfs(grid, i, j, m, n, marked)
+
         return count
 
     def __dfs(self, grid, i, j, m, n, marked):

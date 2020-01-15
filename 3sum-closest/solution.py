@@ -3,30 +3,30 @@ from typing import List
 
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
-        n=len(nums)
+        n = len(nums)
 
-        if(not nums or n<3):
+        if (not nums or n < 3):
             return None
 
         nums.sort()
-        res=float("inf")
+        res = float("inf")
 
         for i in range(n):
-            if(i>0 and nums[i]==nums[i-1]):
+            if (i > 0 and nums[i] == nums[i - 1]):
                 continue
-            L=i+1
-            R=n-1
+            L = i + 1
+            R = n - 1
 
-            while(L<R):
-                cur_sum=nums[i]+nums[L]+nums[R]
-                
-                if(cur_sum==target):
+            while (L < R):
+                cur_sum = nums[i] + nums[L] + nums[R]
+
+                if (cur_sum == target):
                     return target
-                if(abs(cur_sum-target)<abs(res-target)):
-                    res=cur_sum
-                if(cur_sum-target<0):
-                    L+=1
+                if (abs(cur_sum - target) < abs(res - target)):
+                    res = cur_sum
+                if (cur_sum - target < 0):
+                    L += 1
                 else:
-                    R-=1
+                    R -= 1
 
         return res
