@@ -36,7 +36,7 @@ class Solution:
             return -1
 
         if n == 1:
-            return 0 if nums[0] == target else -1 
+            return 0 if nums[0] == target else -1
 
         rotate_index = find_rotate_index(0, n - 1)
 
