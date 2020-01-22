@@ -2,7 +2,8 @@ from typing import List
 
 
 class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates: List[int],
+                        target: int) -> List[List[int]]:
         def dfs(begin, path, residue):
             if residue == 0:
                 res.append(path[:])
@@ -12,7 +13,8 @@ class Solution:
                 if candidates[index] > residue:
                     break
 
-                if index > begin and candidates[index - 1] == candidates[index]:
+                if index > begin and candidates[index -
+                                                1] == candidates[index]:
                     continue
 
                 path.append(candidates[index])
