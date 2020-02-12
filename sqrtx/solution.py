@@ -9,7 +9,7 @@ class Solution:
             pivot = left + (right - left) // 2
             num = pivot * pivot
             if num > x:
-                right = pivot -1
+                right = pivot - 1
             elif num < x:
                 left = pivot + 1
             else:
