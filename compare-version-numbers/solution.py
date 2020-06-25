@@ -21,7 +21,7 @@ class Solution:
 
         while p1 < n1 or p2 < n2:
             i1, p1 = self.get_next_chunk(version1, n1, p1)
-            i2, p2 = self.get_next_chunk(version2, n2, p2)            
+            i2, p2 = self.get_next_chunk(version2, n2, p2)
             if i1 != i2:
                 return 1 if i1 > i2 else -1
 
