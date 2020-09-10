@@ -8,5 +8,6 @@ class NumArray:
         for i in range(len(nums)):
             self.arr.append(self.arr[i]+nums[i])
 
+
     def sumRange(self, i: int, j: int) -> int:
         return self.arr[j+1] - self.arr[i]
